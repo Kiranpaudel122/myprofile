@@ -1,62 +1,256 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MyPage</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="ここにサイト説明を入れます">
-    <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAUDEL KIRAN | ポートフォリオ / Portfolio</title>
+<meta name="description" content="福岡の愛和システムエンジニア専門学校で学ぶ、ネパール出身の留学生 パウデル キラン のポートフォリオ。 Portfolio of Paudel Kiran, a system engineering student from Nepal in Fukuoka.">
+<script>
+  // 保存したテーマ（ライト／ダーク）と言語を、ページが表示される前に反映する
+  try {
+    var t = localStorage.getItem('kiran-theme'); if (t) document.documentElement.dataset.theme = t;
+    var l = localStorage.getItem('kiran-lang'); if (l === 'en') { document.documentElement.dataset.lang = 'en'; document.documentElement.lang = 'en'; }
+  } catch (e) {}
+  document.documentElement.classList.add('js');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+<a class="skip" href="#main"><span lang="ja">本文へスキップ</span><span lang="en">Skip to content</span></a>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
-    <div id="container">
+<!-- ===== ヘッダー ===== -->
+<header class="header" id="header">
+  <div class="wrap header-in">
+    <a class="logo" href="#hero" aria-label="PAUDEL KIRAN">
+      <span class="logo-mark" aria-hidden="true">K</span>
+      <span>PAUDEL KIRAN</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Menu">
+      <ul>
+        <li><a href="#about"><span lang="ja">自己紹介</span><span lang="en">About</span><small lang="ja">About</small><small lang="en">自己紹介</small></a></li>
+        <li><a href="#projects"><span lang="ja">作品集</span><span lang="en">Projects</span><small lang="ja">Projects</small><small lang="en">作品集</small></a></li>
+        <li><a href="#skills"><span lang="ja">スキル</span><span lang="en">Skills</span><small lang="ja">Skills</small><small lang="en">スキル</small></a></li>
+        <li><a href="#contact"><span lang="ja">お問い合わせ</span><span lang="en">Contact</span><small lang="ja">Contact</small><small lang="en">お問い合わせ</small></a></li>
+      </ul>
+    </nav>
+    <div class="header-tools">
+      <div class="lang-switch" role="group" aria-label="Language / 言語">
+        <button type="button" data-set-lang="ja" aria-pressed="true">日本語</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="icon-btn" type="button" id="theme-btn" aria-label="Dark mode">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn menu-btn" type="button" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
 
-        <header>
-            <h1 id="logo"><a href="index.html"><img style="width: 10%;" src="images/Kiran Paudel - MarkMaker Logo.png"
-                        alt="SAMPLE SITE"></a></h1>
-            <aside id="mainimg"><img style="width: 50%;" src="images/motu patlu image.jpg" alt=""></aside>
-        </header>
+<main id="main">
 
-        <nav id="menubar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="link.html">Link</a></li>
-            </ul>
-        </nav>
-
-        <div id="contents">
-
-            <section id="new">
-                <h2>更新情報・お知らせ</h2>
-                <dl>
-                    <dt>2026/05/29</dt>
-                    <dd>テンプレートを使って初めての作成</dd>
-                    <dt>2026/04/08</dt>
-                    <dd>愛和システムエンジニア専門に入学</dd>
-
-                </dl>
-            </section>
-
-
-
-        </div>
-
-
-        <footer>
-            <small>Copyright&copy; <a href="index.html">PAUDEL KIRAN</a> All Rights Reserved.</small>
-            <span class="pr">《<a href="https://template-party.com/" target="_blank">Web
-                    Design:Template-Party</a>》</span>
-        </footer>
-
+<!-- ===== ヒーロー ===== -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow reveal"><span class="route">Nepal <i class="fa-solid fa-plane" aria-hidden="true"></i> Fukuoka</span> System Engineering Student</p>
+      <h1 class="reveal">
+        <span class="name-ja" lang="ja">パウデル<br>キラン</span>
+        <span class="name-ja name-latin" lang="en">Paudel<br>Kiran</span>
+        <span class="name-en" lang="ja">Paudel Kiran</span>
+        <span class="name-en" lang="en">パウデル キラン</span>
+      </h1>
+      <p class="lead reveal" lang="ja">日本のIT企業への就職を目指している留学生、パウデル キラン です。現在、福岡市内の専門学校でシステムエンジニアリングを専攻しています。</p>
+      <p class="lead reveal" lang="en">I’m Paudel Kiran, an international student aiming to work at an IT company in Japan. I’m currently majoring in system engineering at a vocational school in Fukuoka.</p>
+      <div class="hero-btns reveal">
+        <a class="btn btn-primary" href="#projects"><span lang="ja">制作実績を見る</span><span lang="en">See my projects</span> <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+        <a class="btn btn-ghost" href="#contact"><span lang="ja">お問い合わせ</span><span lang="en">Contact me</span></a>
+      </div>
+      <ul class="hero-facts reveal">
+        <li><i class="fa-solid fa-school" aria-hidden="true"></i><span lang="ja">愛和システムエンジニア専門学校 1年</span><span lang="en">Aiwa System Engineer College, 1st year</span></li>
+        <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span lang="ja">福岡県福岡市</span><span lang="en">Fukuoka, Japan</span></li>
+        <li><i class="fa-solid fa-language" aria-hidden="true"></i><span lang="ja">日本語・英語</span><span lang="en">Japanese · English</span></li>
+      </ul>
     </div>
 
+    <div class="hero-visual reveal">
+      <div class="sun" aria-hidden="true"></div>
+      <div class="arch">
+        <img src="images/kirann.png" alt="Paudel Kiran" width="600" height="750">
+      </div>
+      <div class="badge-card" aria-hidden="true">
+        <span class="badge-num" id="project-count">36</span>
+        <span class="badge-label">Java<br><small>Projects</small></span>
+      </div>
+      <div class="stamp" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+          <text><textPath href="#circ">OPEN TO INTERNSHIPS · OPEN TO INTERNSHIPS · </textPath></text></svg>
+        <i class="fa-solid fa-mountain-sun"></i>
+      </div>
+    </div>
+  </div>
 
+  <!-- 山なみ（ネパールの山をイメージ） -->
+  <svg class="ridges" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+    <path class="r1" d="M0 150 L120 90 L210 130 L330 40 L430 120 L520 80 L640 140 L760 60 L880 130 L990 70 L1100 120 L1230 50 L1340 110 L1440 80 V220 H0 Z"/>
+    <path class="r2" d="M0 180 L140 130 L260 170 L380 110 L500 165 L620 125 L760 175 L900 115 L1040 170 L1180 120 L1310 165 L1440 130 V220 H0 Z"/>
+    <path class="r3" d="M0 205 L180 175 L360 200 L540 170 L720 205 L900 175 L1080 200 L1260 172 L1440 198 V220 H0 Z"/>
+  </svg>
+</section>
+
+<!-- ===== 自己紹介 ===== -->
+<section class="section" id="about">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="sec-no">01</p>
+      <h2><span lang="ja">自己紹介</span><span lang="en">About Me</span></h2>
+      <p class="sec-en">Profile &amp; Background</p>
+    </header>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="about-lead reveal" lang="ja">はじめまして、パウデル キラン と申します。現在、日本の専門学校でITの基礎からシステム開発の応用まで、熱意を持って学んでいます。</p>
+        <p class="about-lead reveal" lang="en">Nice to meet you, I’m Paudel Kiran. At a vocational school in Japan, I’m studying everything from IT basics to applied system development, with real enthusiasm.</p>
+        <p class="reveal" lang="ja">日本に留学して以来、言語の壁を乗り越えるだけでなく、技術的な成長を常に追求してきました。エラーに直面した時こそ成長のチャンスと捉え、論理的に原因を分析し、解決に結びつける力を日々養っています。</p>
+        <p class="reveal" lang="en">Since coming to Japan, I’ve worked not only on getting past the language barrier but also on growing as an engineer. I see every error as a chance to grow, and every day I practise finding the cause logically and turning it into a fix.</p>
+      </div>
+      <dl class="profile reveal">
+        <div><dt><span lang="ja">氏名</span><span lang="en">Name</span></dt><dd>PAUDEL KIRAN<span lang="ja">（パウデル キラン）</span></dd></div>
+        <div><dt><span lang="ja">出身国</span><span lang="en">From</span></dt><dd><span lang="ja">ネパール</span><span lang="en">Nepal</span></dd></div>
+        <div><dt><span lang="ja">在籍校</span><span lang="en">School</span></dt><dd><span lang="ja">愛和システムエンジニア専門学校 1年</span><span lang="en">Aiwa System Engineer College, 1st year</span></dd></div>
+        <div><dt><span lang="ja">居住地</span><span lang="en">Lives in</span></dt><dd><span lang="ja">福岡県福岡市</span><span lang="en">Fukuoka City, Fukuoka</span></dd></div>
+        <div><dt><span lang="ja">言語</span><span lang="en">Languages</span></dt><dd><span lang="ja">日本語（ビジネスレベル学習中）、英語</span><span lang="en">Japanese (studying for business level), English</span></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 作品集 ===== -->
+<!-- カードは js/script.js が works-data.js（build-works.ps1 で作成）から作ります -->
+<section class="section section-alt" id="projects">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="sec-no">02</p>
+      <h2><span lang="ja">作品集（制作実績）</span><span lang="en">Projects</span></h2>
+      <p class="sec-en">Vocational School Projects</p>
+    </header>
+    <p class="sec-intro reveal" lang="ja">専門学校のEclipseで作ったJavaのプロジェクトです。<b class="stat-projects">36</b>個のプロジェクトで、合計<b class="stat-lines">—</b>行のJavaを書きました。どの作品も「コードを見る」で中身を読めます。</p>
+    <p class="sec-intro reveal" lang="en">Java projects I built in Eclipse at school: <b class="stat-projects">36</b> projects and <b class="stat-lines">—</b> lines of Java in total. Open “View code” on any of them to read the source.</p>
+
+    <h3 class="sub reveal"><span lang="ja">代表作</span><span lang="en">Featured</span><small lang="ja">Featured</small><small lang="en">代表作</small></h3>
+    <div class="feature-grid" id="featured"></div>
+
+    <div class="list-head reveal">
+      <h3 class="sub"><span lang="ja">その他のプロジェクト</span><span lang="en">Lessons &amp; practice</span><small lang="ja">Lessons &amp; practice</small><small lang="en">その他のプロジェクト</small></h3>
+      <div class="filters" id="filters" role="group" aria-label="Filter"></div>
+    </div>
+    <p class="sr-only" id="filter-status" aria-live="polite"></p>
+    <div class="work-list" id="work-list"></div>
+    <noscript><p>作品を表示するには JavaScript を有効にしてください。 Please turn on JavaScript to see the projects.</p></noscript>
+  </div>
+</section>
+
+<!-- ===== スキル ===== -->
+<section class="section" id="skills">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="sec-no">03</p>
+      <h2><span lang="ja">スキル・技術スタック</span><span lang="en">Skills &amp; Tech Stack</span></h2>
+      <p class="sec-en">Technical Expertise</p>
+    </header>
+
+    <div class="skills-layout">
+      <div class="meters reveal">
+        <h3 class="sub"><span lang="ja">自己評価</span><span lang="en">Self-assessment</span><small lang="ja">Self-assessment</small><small lang="en">自己評価</small></h3>
+        <div class="meter" style="--v: 70">
+          <div class="meter-top"><span><i class="fa-brands fa-html5" aria-hidden="true"></i>HTML5 / CSS3</span><b>70%</b></div>
+          <div class="meter-bar" role="progressbar" aria-label="HTML5 / CSS3" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><i></i></div>
+        </div>
+        <div class="meter" style="--v: 55">
+          <div class="meter-top"><span><i class="fa-brands fa-java" aria-hidden="true"></i><span lang="ja">Java（アルゴリズム設計）</span><span lang="en">Java (algorithm design)</span></span><b>55%</b></div>
+          <div class="meter-bar" role="progressbar" aria-label="Java" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"><i></i></div>
+        </div>
+        <div class="meter" style="--v: 80">
+          <div class="meter-top"><span><i class="fa-regular fa-file-word" aria-hidden="true"></i><span lang="ja">ドキュメント作成（仕様書・報告書）</span><span lang="en">Documents (specs, reports)</span></span><b>80%</b></div>
+          <div class="meter-bar" role="progressbar" aria-label="Documents" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><i></i></div>
+        </div>
+      </div>
+
+      <div class="learned">
+        <h3 class="sub reveal"><span lang="ja">作品で使った技術</span><span lang="en">Used in my projects</span><small lang="ja">作品名を押すと移動します</small><small lang="en">Click a project name to jump to it</small></h3>
+        <ul class="tech-grid">
+          <li class="tech reveal"><span class="tech-ic"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></span><b><span lang="ja">Java基礎（条件分岐・ループ・配列）</span><span lang="en">Java basics (if, loops, arrays)</span></b><span class="used"><span lang="ja">使った作品：</span><span lang="en">Used in:</span><a href="#w-lesson05">L05</a><a href="#w-lesson06">L06</a><a href="#w-lesson07">L07</a></span></li>
+          <li class="tech reveal"><span class="tech-ic"><i class="fa-solid fa-cubes" aria-hidden="true"></i></span><b><span lang="ja">オブジェクト指向（クラス・カプセル化・継承）</span><span lang="en">OOP (classes, encapsulation, inheritance)</span></b><span class="used"><span lang="ja">使った作品：</span><span lang="en">Used in:</span><a href="#w-lesson08">L08</a><a href="#w-lesson09">L09</a><a href="#w-lesson11">L11</a></span></li>
+          <li class="tech reveal"><span class="tech-ic"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span><b><span lang="ja">コレクション（ArrayList・HashMap）</span><span lang="en">Collections (ArrayList, HashMap)</span></b><span class="used"><span lang="ja">使った作品：</span><span lang="en">Used in:</span><a href="#w-online-shopping"><span lang="ja">ショップ</span><span lang="en">Shop</span></a><a href="#w-robocode">Robocode</a></span></li>
+          <li class="tech reveal"><span class="tech-ic"><i class="fa-solid fa-file-csv" aria-hidden="true"></i></span><b><span lang="ja">ファイル入出力（CSV・FileWriter）</span><span lang="en">File I/O (CSV, FileWriter)</span></b><span class="used"><span lang="ja">使った作品：</span><span lang="en">Used in:</span><a href="#w-online-shopping"><span lang="ja">ショップ</span><span lang="en">Shop</span></a><a href="#w-school"><span lang="ja">学生管理</span><span lang="en">Students</span></a><a href="#w-product-catalog"><span lang="ja">カタログ</span><span lang="en">Catalog</span></a></span></li>
+          <li class="tech reveal"><span class="tech-ic"><i class="fa-solid fa-database" aria-hidden="true"></i></span><b><span lang="ja">データベース（SQLite・JDBC・SQL）</span><span lang="en">Databases (SQLite, JDBC, SQL)</span></b><span class="used"><span lang="ja">使った作品：</span><span lang="en">Used in:</span><a href="#w-database01">DB01</a><a href="#w-database03">DB03</a><a href="#w-restaurant-menu"><span lang="ja">メニュー</span><span lang="en">Menu</span></a></span></li>
+          <li class="tech reveal"><span class="tech-ic"><i class="fa-solid fa-sitemap" aria-hidden="true"></i></span><b><span lang="ja">MVC設計（役割ごとにクラスを分ける）</span><span lang="en">MVC (one job per class)</span></b><span class="used"><span lang="ja">使った作品：</span><span lang="en">Used in:</span><a href="#w-product-catalog"><span lang="ja">カタログ</span><span lang="en">Catalog</span></a><a href="#w-restaurant-menu"><span lang="ja">メニュー</span><span lang="en">Menu</span></a><a href="#w-webapp04"><span lang="ja">顧客検索</span><span lang="en">Search</span></a></span></li>
+          <li class="tech reveal"><span class="tech-ic"><i class="fa-solid fa-globe" aria-hidden="true"></i></span><b><span lang="ja">Webアプリ（Servlet・JSP）</span><span lang="en">Web apps (Servlet, JSP)</span></b><span class="used"><span lang="ja">使った作品：</span><span lang="en">Used in:</span><a href="#w-webapp01">Web01</a><a href="#w-webapp03">Web03</a><a href="#w-webapp04"><span lang="ja">顧客検索</span><span lang="en">Search</span></a></span></li>
+          <li class="tech reveal"><span class="tech-ic"><i class="fa-solid fa-calculator" aria-hidden="true"></i></span><b><span lang="ja">アルゴリズム・数学（paiza・三角関数）</span><span lang="en">Algorithms &amp; math (paiza, trigonometry)</span></b><span class="used"><span lang="ja">使った作品：</span><span lang="en">Used in:</span><a href="#w-paiza">paiza</a><a href="#w-robocode">Robocode</a></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== お問い合わせ ===== -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <p class="sec-no">04</p>
+      <p class="sec-en">Get In Touch</p>
+      <h2 lang="ja">面接やインターンシップの<br>機会をお待ちしております</h2>
+      <h2 lang="en">Open to interviews<br>and internships</h2>
+      <p lang="ja">採用、面接、またはインターンシップに関するご連絡は、以下の連絡先まで直接お願いいたします。</p>
+      <p lang="en">For hiring, interviews or internships, please contact me directly at the address below.</p>
+      <div class="mail-row">
+        <a class="mail" href="mailto:kiranpaudel982316@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i>kiranpaudel982316@gmail.com</a>
+        <button class="btn btn-ghost btn-sm" type="button" id="copy-btn" data-email="kiranpaudel982316@gmail.com"><i class="fa-regular fa-copy" aria-hidden="true"></i> <span class="copy-label"><span lang="ja">コピー</span><span lang="en">Copy</span></span></button>
+      </div>
+      <p class="sr-only" id="copy-status" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="footer-logo">PAUDEL KIRAN</p>
+    <p lang="ja">福岡県福岡市在住 | IT留学生・就職活動中</p>
+    <p lang="en">Based in Fukuoka | International IT student, job hunting</p>
+    <small>Copyright &copy; <span id="year">2026</span> PAUDEL KIRAN All Rights Reserved.</small>
+  </div>
+</footer>
+
+<!-- コードビューアー -->
+<dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+  <div class="viewer-head">
+    <div class="viewer-name">
+      <h2 id="viewer-title"></h2>
+      <p id="viewer-sub"></p>
+    </div>
+    <a class="btn btn-ghost btn-sm" id="viewer-preview" target="_blank" rel="noopener" hidden><span lang="ja">生成ページ</span><span lang="en">Generated page</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+    <button class="icon-btn" type="button" id="viewer-close" aria-label="Close"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+  </div>
+  <div class="viewer-body">
+    <nav class="files" aria-label="Files"><ul id="viewer-files"></ul></nav>
+    <div class="code-box">
+      <div class="code-head"><span id="code-name"></span><button class="btn btn-ghost btn-sm" type="button" id="code-copy"><i class="fa-regular fa-copy" aria-hidden="true"></i> <span class="copy-label"><span lang="ja">コピー</span><span lang="en">Copy</span></span></button></div>
+      <div class="code-scroll" id="code-scroll" tabindex="0"></div>
+    </div>
+  </div>
+</dialog>
+
+<a class="to-top" id="to-top" href="#hero" aria-label="Top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="works-data.js"></script>
+<script src="js/script.js"></script>
 </body>
-
 </html>
